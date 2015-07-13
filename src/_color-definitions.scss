@@ -587,6 +587,55 @@ $palette-blue-grey-700: nth($palette-blue-grey, 8);
 $palette-blue-grey-800: nth($palette-blue-grey, 9);
 $palette-blue-grey-900: nth($palette-blue-grey, 10);
 
+$palette-plum:
+"231,231,236"
+"182,182,197"
+"134,134,159"
+"94,94,126"
+"53,53,94"
+"13,13,62"
+"11,11,54"
+"10,10,47"
+"8,8,39"
+"7,7,31";
+
+$palette-plum-50: nth($palette-plum, 1);
+$palette-plum-100: nth($palette-plum, 2);
+$palette-plum-200: nth($palette-plum, 3);
+$palette-plum-300: nth($palette-plum, 4);
+$palette-plum-400: nth($palette-plum, 5);
+$palette-plum-500: nth($palette-plum, 6);
+$palette-plum-600: nth($palette-plum, 7);
+$palette-plum-700: nth($palette-plum, 8);
+$palette-plum-800: nth($palette-plum, 9);
+$palette-plum-900: nth($palette-plum, 10);
+
+
+$palette-lavender:
+"240,240,245"
+"211,211,225"
+"181,181,206"
+"156,156,189"
+"132,132,172"
+"107,107,156"
+"94,94,137"
+"80,80,117"
+"67,67,98"
+"54,54,78";
+
+$palette-lavender-50: nth($palette-lavender, 1);
+$palette-lavender-100: nth($palette-lavender, 2);
+$palette-lavender-200: nth($palette-lavender, 3);
+$palette-lavender-300: nth($palette-lavender, 4);
+$palette-lavender-400: nth($palette-lavender, 5);
+$palette-lavender-500: nth($palette-lavender, 6);
+$palette-lavender-600: nth($palette-lavender, 7);
+$palette-lavender-700: nth($palette-lavender, 8);
+$palette-lavender-800: nth($palette-lavender, 9);
+$palette-lavender-900: nth($palette-lavender, 10);
+
+
+
 $color-black: "0,0,0";
 $color-white: "255,255,255";
 
