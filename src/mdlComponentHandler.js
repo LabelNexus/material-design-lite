@@ -51,6 +51,18 @@ var componentHandler = (function() {
   }
 
   /**
+   * Returns an array of the classNames of the upgraded classes on the element.
+   * @param {HTMLElement} element The element to fetch data from.
+   * @return {[string]}
+   * @private
+   */
+  function getUpgradedListOfElement_(element) {
+    var dataUpgraded = element.getAttribute('data-upgraded');
+    // Use `['']` as default value to conform the `,name,name...` style.
+    return dataUpgraded === null ? [''] : dataUpgraded.split(',');
+  }
+
+  /**
    * Returns true if the given element has already been upgraded for the given
    * class.
    * @param {HTMLElement} element The element we want to check.
@@ -59,8 +71,8 @@ var componentHandler = (function() {
    * @private
    */
   function isElementUpgraded_(element, jsClass) {
-    var dataUpgraded = element.getAttribute('data-upgraded');
-    return dataUpgraded && dataUpgraded.indexOf(jsClass) !== -1;
+    var upgradedList = getUpgradedListOfElement_(element);
+    return upgradedList.indexOf(jsClass) !== -1;
   }
 
   /**
@@ -99,37 +111,41 @@ var componentHandler = (function() {
    * the element to.
    */
   function upgradeElementInternal(element, optJsClass) {
-    // Only upgrade elements that have not already been upgraded.
-    var dataUpgraded = element.getAttribute('data-upgraded');
-
-    var registeredClasses = [];
+    // Verify argument type.
+    if (!(typeof element === 'object' && element instanceof Element)) {
+      throw new Error('Invalid argument provided to upgrade MDL element.');
+    }
+    var upgradedList = getUpgradedListOfElement_(element);
+    var classesToUpgrade = [];
     // If jsClass is not provided scan the registered components to find the
     // ones matching the element's CSS classList.
     if (!optJsClass) {
-      registeredClasses = registeredComponents_.filter(function(component) {
-        return element.classList.contains(component.cssClass) &&
-          !isElementUpgraded_(element, component.className);
+      var classList = element.classList;
+      registeredComponents_.forEach(function (component) {
+        // Match CSS & Not to be upgraded & Not upgraded.
+        if (classList.contains(component.cssClass) &&
+            classesToUpgrade.indexOf(component) === -1 &&
+            !isElementUpgraded_(element, component.className)) {
+          classesToUpgrade.push(component);
+        }
       });
     } else if (!isElementUpgraded_(element, optJsClass)) {
-      registeredClasses.push(findRegisteredClass_(optJsClass));
+      classesToUpgrade.push(findRegisteredClass_(optJsClass));
     }
 
     // Upgrade the element for each classes.
-    for (var i = 0, l = registeredClasses.length; i < l; i++) {
-      var registeredClass = registeredClasses[i];
+    for (var i = 0, n = classesToUpgrade.length, registeredClass; i < n; i++) {
+      registeredClass = classesToUpgrade[i];
       if (registeredClass) {
         // Mark element as upgraded.
-        if (dataUpgraded === null) {
-          dataUpgraded = '';
-        }
-        element.setAttribute('data-upgraded', dataUpgraded + ',' +
-          registeredClass.className);
+        upgradedList.push(registeredClass.className);
+        element.setAttribute('data-upgraded', upgradedList.join(','));
         var instance = new registeredClass.classConstructor(element);
         instance[componentConfigProperty_] = registeredClass;
         createdComponents_.push(instance);
         // Call any callbacks the user has registered with this component type.
-        for (var j = 0, len = registeredClass.callbacks.length; j < len; i++) {
-          registeredClass.callbacks[i](element);
+        for (var j = 0, m = registeredClass.callbacks.length; j < m; j++) {
+          registeredClass.callbacks[j](element);
         }
 
         if (registeredClass.widget) {
@@ -144,6 +160,30 @@ var componentHandler = (function() {
       var ev = document.createEvent('Events');
       ev.initEvent('mdl-componentupgraded', true, true);
       element.dispatchEvent(ev);
+    }
+  }
+
+  /**
+   * Upgrades a specific list of elements rather than all in the DOM.
+   * @param {HTMLElement | [HTMLElement] | NodeList | HTMLCollection} elements
+   * The elements we wish to upgrade.
+   */
+  function upgradeElementsInternal(elements) {
+    if (!Array.isArray(elements)) {
+      if (typeof elements.item === 'function') {
+        elements = Array.prototype.slice.call(elements);
+      } else {
+        elements = [elements];
+      }
+    }
+    for (var i = 0, n = elements.length, element; i < n; i++) {
+      element = elements[i];
+      if (element instanceof HTMLElement) {
+        if (element.children.length > 0) {
+          upgradeElementsInternal(element.children);
+        }
+        upgradeElementInternal(element);
+      }
     }
   }
 
@@ -277,6 +317,7 @@ var componentHandler = (function() {
   return {
     upgradeDom: upgradeDomInternal,
     upgradeElement: upgradeElementInternal,
+    upgradeElements: upgradeElementsInternal,
     upgradeAllRegistered: upgradeAllRegisteredInternal,
     registerUpgradedCallback: registerUpgradedCallbackInternal,
     register: registerInternal,
