@@ -254,7 +254,8 @@ gulp.task('default', ['clean', 'mocha'], function (cb) {
 // Build production files and microsite
 gulp.task('all', ['clean', 'mocha'], function (cb) {
   runSequence(
-    ['default', 'styletemplates', 'styles:gen'],
+    ['default', 'styletemplates'],
+    ['styles:gen'],
     ['jshint', 'jscs', 'scripts',  'assets', 'demos', 'pages',
      'templates', 'images', 'styles-grid', 'metadata'],
     ['zip'],
@@ -539,7 +540,7 @@ gulp.task('pushCodeFiles', function() {
   // (cache control, in this case).
   // For cache control, start with 0s (disable caching during dev),
   // but consider more helpful interval (e.g. 3600s) after launch.
-  var cacheControl = '-h "Cache-Control:public,max-age=60"';
+  var cacheControl = '-h "Cache-Control:public,max-age=3600"';
   var gsutilCpCmd = 'gsutil -m cp -z js,css,map ';
   var gsutilCacheCmd = 'gsutil -m setmeta -R ' + cacheControl;
 
@@ -714,6 +715,9 @@ gulp.task('styles:gen', ['styles'], function() {
   var stream = gulp.src('');
   mc.paletteIndices.forEach(function(primary) {
     mc.paletteIndices.forEach(function(accent) {
+      if (primary === accent) {
+        return;
+      }
       if (mc.forbiddenAccents.indexOf(accent) !== -1) {
         return;
       }
