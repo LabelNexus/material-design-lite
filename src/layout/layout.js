@@ -206,6 +206,18 @@ MaterialLayout.prototype.resetPanelState_ = function(panels) {
   }
 };
 
+/*
+* Downgrade the component
+*/
+MaterialLayout.prototype.mdlDowngrade_ = function() {
+  'use strict';
+  this.header_ = null;
+  this.content_ = null;
+  this.drawer_ = null;
+  this.screenSizeMediaQuery_ = null;
+  this.tabBar_ = null;
+};
+
 /**
  * Initialize element.
  */

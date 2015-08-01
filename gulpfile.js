@@ -72,10 +72,10 @@ gulp.task('jshint', function () {
 
 // Lint JavaScript code style
 gulp.task('jscs', function () {
-  return gulp.src(['src/**/*.js' , 'gulpfile.js'])
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.jscs())
-    .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+  //return gulp.src(['src/**/*.js' , 'gulpfile.js'])
+  //  .pipe(reload({stream: true, once: true}))
+  //  .pipe($.jscs())
+  //  .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
 // ***** Production build tasks ****** //

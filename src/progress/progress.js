@@ -104,6 +104,10 @@ MaterialProgress.prototype.mdlDowngrade_ = function() {
   while (this.element_.firstChild) {
     this.element_.removeChild(this.element_.firstChild);
   }
+
+  this.progressbar_ = null;
+  this.bufferbar_ = null;
+  this.auxbar_ = null;
 };
 
 // The component registers itself. It can assume componentHandler is available
