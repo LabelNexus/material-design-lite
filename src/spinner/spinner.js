@@ -40,11 +40,12 @@ MaterialSpinner.prototype.Constant_ = {
   MDL_SPINNER_LAYER_COUNT: 4
 };
 
+/*
+* Downgrade the component.
+*/
 MaterialSpinner.prototype.mdlDowngrade_ = function() {
   'use strict';
-
 };
-
 
 /**
  * Store strings for class names defined by this component that are used in

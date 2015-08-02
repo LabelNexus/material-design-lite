@@ -464,11 +464,11 @@ MaterialMenu.prototype.toggle = function(evt) {
 MaterialMenu.prototype.mdlDowngrade_ = function() {
   'use strict';
   var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM);
-	this.boundItemClick = null;
-	this.boundItemKeydown = null;
-	this.container_ = null;
-	this.forElement_ = null;
-	this.outline_ = null;
+  this.boundItemClick = null;
+  this.boundItemKeydown = null;
+  this.container_ = null;
+  this.forElement_ = null;
+  this.outline_ = null;
 
   for (var i = 0; i < items.length; i++) {
     items[i].removeEventListener('click', this.boundItemClick);

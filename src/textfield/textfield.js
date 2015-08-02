@@ -235,11 +235,12 @@ MaterialTextfield.prototype.mdlDowngrade_ = function() {
   if (this.boundKeyDownHandler) {
     this.input_.removeEventListener('keydown', this.boundKeyDownHandler);
   }
-	this.boundBlurHandler = null;
-	this.boundFocusHandler = null;
-	this.boundUpdateClassesHandler = null;
-	this.input_ = null;
-	this.label_ = null;
+
+  this.boundBlurHandler = null;
+  this.boundFocusHandler = null;
+  this.boundUpdateClassesHandler = null;
+  this.input_ = null;
+  this.label_ = null;
 };
 
 // The component registers itself. It can assume componentHandler is available

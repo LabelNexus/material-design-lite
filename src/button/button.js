@@ -120,7 +120,7 @@ MaterialButton.prototype.mdlDowngrade_ = function() {
   }
   this.element_.removeEventListener('mouseup', this.boundButtonBlurHandler);
   this.element_.removeEventListener('mouseleave', this.boundButtonBlurHandler);
-	this.boundButtonBlurHandler = null;
+  this.boundButtonBlurHandler = null;
 };
 
 // The component registers itself. It can assume componentHandler is available

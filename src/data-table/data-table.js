@@ -53,11 +53,12 @@ MaterialDataTable.prototype.CssClasses_ = {
   IS_UPGRADED: 'is-upgraded'
 };
 
+/**
+ * Downgrade
+ */
 MaterialDataTable.prototype.mdlDowngrade_ = function() {
   'use strict';
-
 };
-
 
 MaterialDataTable.prototype.selectRow_ = function(checkbox, row, rows) {
   'use strict';

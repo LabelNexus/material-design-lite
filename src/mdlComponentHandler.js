@@ -295,10 +295,10 @@ var componentHandler = (function() {
       ev.initEvent('mdl-componentdowngraded', true, true);
       component.element_.dispatchEvent(ev);
 
-			component.element_ = null;
-			//component.__proto__ = null;
-			component.mdlComponentConfigInternal_ = null;
-			component = null;
+      component.element_ = null;
+      //component.__proto__ = null;
+      component.mdlComponentConfigInternal_ = null;
+      component = null;
     }
   }
 
@@ -343,7 +343,7 @@ window.addEventListener('load', function() {
    * tested, adds a mdl-js class to the <html> element. It then upgrades all MDL
    * components requiring JavaScript.
    */
-  
+
 });
 
 /**
