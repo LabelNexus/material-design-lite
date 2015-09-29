@@ -4,6 +4,20 @@
   "validateLineBreaks": "LF",
   "excludeFiles": ["node_modules/**"],
   "maximumLineLength": 130,
-  "requireCamelCaseOrUpperCaseIdentifiers": true,
-  "validateQuoteMarks": "'"
+  "validateQuoteMarks": "'",
+  "requireDotNotation": false,
+  "requireCamelCaseOrUpperCaseIdentifiers": null,
+  "additionalRules": ["utils/jscs-rules/*.js"],
+  "closureCamelCase": true,
+  "jsDoc": {
+    "checkAnnotations": {
+      "preset": "closurecompiler",
+      "extra": {
+        "type": true,
+        "suppress": true
+      }
+    },
+    "checkTypes": "strictNativeCase",
+    "enforceExistence": "exceptExports"
+  }
 }
