@@ -115,7 +115,7 @@
    */
   MaterialTextfield.prototype.updateClasses_ = function() {
     this.checkDisabled();
-    if(this.element_.classList.contains(this.CssClasses_.IS_UPGRADED)) {
+    if (this.element_.classList.contains(this.CssClasses_.IS_UPGRADED)) {
       this.checkValidity();
     }
     this.checkDirty();

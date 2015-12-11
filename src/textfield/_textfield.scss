@@ -188,7 +188,8 @@
   // visible, otherwise it cannot be tabbed to nor focused via a <label>.
   // TODO: In some cases (Retina displays), this is big enough to render the
   // inner element :(
-  max-width: 0.1px;
+  // LN: We don't need it to be tabable.  IE was showing this
+  max-width: 0px;
 
   .mdl-textfield.is-focused &, .mdl-textfield.is-dirty & {
     // This is an unfortunate hack. Animating between widths in percent (%)
