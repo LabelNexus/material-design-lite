@@ -15,6 +15,186 @@
  */
 
 @import "../variables";
+//primary blue
+
+.mdl-color-text--primary-blue {
+  color: unquote("rgb(#{$palette-primary-blue-500})") !important;
+}
+
+.mdl-color--primary-blue {
+  background-color: unquote("rgb(#{$palette-primary-blue-500})") !important;
+}
+
+.mdl-color-text--primary-blue-50 {
+  color: unquote("rgb(#{$palette-primary-blue-50})") !important;
+}
+
+.mdl-color--primary-blue-50 {
+  background-color: unquote("rgb(#{$palette-primary-blue-50})") !important;
+}
+
+.mdl-color-text--primary-blue-100 {
+  color: unquote("rgb(#{$palette-primary-blue-100})") !important;
+}
+
+.mdl-color--primary-blue-100 {
+  background-color: unquote("rgb(#{$palette-primary-blue-100})") !important;
+}
+
+.mdl-color-text--primary-blue-200 {
+  color: unquote("rgb(#{$palette-primary-blue-200})") !important;
+}
+
+.mdl-color--primary-blue-200 {
+  background-color: unquote("rgb(#{$palette-primary-blue-200})") !important;
+}
+
+.mdl-color-text--primary-blue-300 {
+  color: unquote("rgb(#{$palette-primary-blue-300})") !important;
+}
+
+.mdl-color--primary-blue-300 {
+  background-color: unquote("rgb(#{$palette-primary-blue-300})") !important;
+}
+
+.mdl-color-text--primary-blue-400 {
+  color: unquote("rgb(#{$palette-primary-blue-400})") !important;
+}
+
+.mdl-color--primary-blue-400 {
+  background-color: unquote("rgb(#{$palette-primary-blue-400})") !important;
+}
+
+.mdl-color-text--primary-blue-500 {
+  color: unquote("rgb(#{$palette-primary-blue-500})") !important;
+}
+
+.mdl-color--primary-blue-500 {
+  background-color: unquote("rgb(#{$palette-primary-blue-500})") !important;
+}
+
+.mdl-color-text--primary-blue-600 {
+  color: unquote("rgb(#{$palette-primary-blue-600})") !important;
+}
+
+.mdl-color--primary-blue-600 {
+  background-color: unquote("rgb(#{$palette-primary-blue-600})") !important;
+}
+
+.mdl-color-text--primary-blue-700 {
+  color: unquote("rgb(#{$palette-primary-blue-700})") !important;
+}
+
+.mdl-color--primary-blue-700 {
+  background-color: unquote("rgb(#{$palette-primary-blue-700})") !important;
+}
+
+.mdl-color-text--primary-blue-800 {
+  color: unquote("rgb(#{$palette-primary-blue-800})") !important;
+}
+
+.mdl-color--primary-blue-800 {
+  background-color: unquote("rgb(#{$palette-primary-blue-800})") !important;
+}
+
+.mdl-color-text--primary-blue-900 {
+  color: unquote("rgb(#{$palette-primary-blue-900})") !important;
+}
+
+.mdl-color--primary-blue-900 {
+  background-color: unquote("rgb(#{$palette-primary-blue-900})") !important;
+}
+
+//Secondary Blue
+
+.mdl-color-text--secondary-blue {
+  color: unquote("rgb(#{$palette-secondary-blue-500})") !important;
+}
+
+.mdl-color--secondary-blue {
+  background-color: unquote("rgb(#{$palette-secondary-blue-500})") !important;
+}
+
+.mdl-color-text--secondary-blue-50 {
+  color: unquote("rgb(#{$palette-secondary-blue-50})") !important;
+}
+
+.mdl-color--secondary-blue-50 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-50})") !important;
+}
+
+.mdl-color-text--secondary-blue-100 {
+  color: unquote("rgb(#{$palette-secondary-blue-100})") !important;
+}
+
+.mdl-color--secondary-blue-100 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-100})") !important;
+}
+
+.mdl-color-text--secondary-blue-200 {
+  color: unquote("rgb(#{$palette-secondary-blue-200})") !important;
+}
+
+.mdl-color--secondary-blue-200 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-200})") !important;
+}
+
+.mdl-color-text--secondary-blue-300 {
+  color: unquote("rgb(#{$palette-secondary-blue-300})") !important;
+}
+
+.mdl-color--secondary-blue-300 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-300})") !important;
+}
+
+.mdl-color-text--secondary-blue-400 {
+  color: unquote("rgb(#{$palette-secondary-blue-400})") !important;
+}
+
+.mdl-color--secondary-blue-400 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-400})") !important;
+}
+
+.mdl-color-text--secondary-blue-500 {
+  color: unquote("rgb(#{$palette-secondary-blue-500})") !important;
+}
+
+.mdl-color--secondary-blue-500 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-500})") !important;
+}
+
+.mdl-color-text--secondary-blue-600 {
+  color: unquote("rgb(#{$palette-secondary-blue-600})") !important;
+}
+
+.mdl-color--secondary-blue-600 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-600})") !important;
+}
+
+.mdl-color-text--secondary-blue-700 {
+  color: unquote("rgb(#{$palette-secondary-blue-700})") !important;
+}
+
+.mdl-color--secondary-blue-700 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-700})") !important;
+}
+
+.mdl-color-text--secondary-blue-800 {
+  color: unquote("rgb(#{$palette-secondary-blue-800})") !important;
+}
+
+.mdl-color--secondary-blue-800 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-800})") !important;
+}
+
+.mdl-color-text--secondary-blue-900 {
+  color: unquote("rgb(#{$palette-secondary-blue-900})") !important;
+}
+
+.mdl-color--secondary-blue-900 {
+  background-color: unquote("rgb(#{$palette-secondary-blue-900})") !important;
+}
+
 
 //Lavender
 
@@ -106,7 +286,7 @@
   background-color: unquote("rgb(#{$palette-lavender-900})") !important;
 }
 
-//Plum 
+//Plum
 
 .mdl-color-text--plum {
   color: unquote("rgb(#{$palette-plum-500})") !important;

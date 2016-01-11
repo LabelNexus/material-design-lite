@@ -634,7 +634,51 @@ $palette-lavender-700: nth($palette-lavender, 8);
 $palette-lavender-800: nth($palette-lavender, 9);
 $palette-lavender-900: nth($palette-lavender, 10);
 
+$palette-primary-blue:
+"186,211,229"
+"131,176,208"
+"90,150,193"
+"58,114,153"
+"49,98,131"
+"41,81,109"
+"33,64,87"
+"24,48,65"
+"16,31,42"
+"8,15,20";
 
+$palette-primary-blue-50: nth($palette-primary-blue, 1);
+$palette-primary-blue-100: nth($palette-primary-blue, 2);
+$palette-primary-blue-200: nth($palette-primary-blue, 3);
+$palette-primary-blue-300: nth($palette-primary-blue, 4);
+$palette-primary-blue-400: nth($palette-primary-blue, 5);
+$palette-primary-blue-500: nth($palette-primary-blue, 6);
+$palette-primary-blue-600: nth($palette-primary-blue, 7);
+$palette-primary-blue-700: nth($palette-primary-blue, 8);
+$palette-primary-blue-800: nth($palette-primary-blue, 9);
+$palette-primary-blue-900: nth($palette-primary-blue, 10);
+
+$palette-secondary-blue:
+"245,249,251"
+"189,215,230"
+"149,190,215"
+"97,158,196"
+"74,144,187"
+"63,128,168"
+"55,111,146"
+"46,94,123"
+"38,77,101"
+"30,60,79";
+
+$palette-secondary-blue-50: nth($palette-secondary-blue, 1);
+$palette-secondary-blue-100: nth($palette-secondary-blue, 2);
+$palette-secondary-blue-200: nth($palette-secondary-blue, 3);
+$palette-secondary-blue-300: nth($palette-secondary-blue, 4);
+$palette-secondary-blue-400: nth($palette-secondary-blue, 5);
+$palette-secondary-blue-500: nth($palette-secondary-blue, 6);
+$palette-secondary-blue-600: nth($palette-secondary-blue, 7);
+$palette-secondary-blue-700: nth($palette-secondary-blue, 8);
+$palette-secondary-blue-800: nth($palette-secondary-blue, 9);
+$palette-secondary-blue-900: nth($palette-secondary-blue, 10);
 
 $color-black: "0,0,0";
 $color-white: "255,255,255";
